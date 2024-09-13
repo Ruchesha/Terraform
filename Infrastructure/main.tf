@@ -1,5 +1,5 @@
 module "dev-infra" {
-	      source = "./my_infra"
+	      source = "./infra_template"
 	      my_env = "dev"
 	      ec2_count = 1
 	      dynamo_table_name = "dev-infra-table"
@@ -8,7 +8,7 @@ module "dev-infra" {
 }
 
 module "staging-infra" {
-        source = "./my_infra"
+        source = "./infra_template"
         my_env = "stg"
         ec2_count = 1
         dynamo_table_name = "stg-infra-table"
@@ -17,7 +17,7 @@ module "staging-infra" {
 }
 
 module "prod-infra" {
-        source = "./my_infra"
+        source = "./infra_template"
         my_env = "prod"
         ec2_count = 1
         dynamo_table_name = "prod-infra-table"
